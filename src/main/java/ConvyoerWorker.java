@@ -28,7 +28,7 @@ public class ConvyoerWorker {
     }
 
     public void doWork(int strategy) {
-        switch (strategy){
+        switch (strategy) {
             case 1 -> routeRandom();
             case 2 -> routeRobin();
             default -> throw new IllegalArgumentException("Invalid strategy input");

@@ -1,7 +1,7 @@
 import java.util.Locale;
 import java.util.Scanner;
 
-public class Factory {
+public class Workplace {
 
 
     public void startWork() {
@@ -37,6 +37,7 @@ public class Factory {
                         .failurePercentage(failurePercentage)
                         .loads(numberOfLoads)
                         .build();
+
                 worker.doWork(strategy);
 
                 System.out.println(worker.getResult());
@@ -44,7 +45,8 @@ public class Factory {
                 System.out.println("Do you want to work again ? Y/N");
                 userInput = sc.next().toLowerCase(Locale.ROOT).trim();
             } catch (Exception e) {
-                System.out.println("Invalid input");
+                System.out.println("Invalid input!");
+                sc.next();
             }
         }
         sc.close();
