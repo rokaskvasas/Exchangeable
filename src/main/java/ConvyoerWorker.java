@@ -46,7 +46,7 @@ public class ConvyoerWorker {
     private void routeRobin() {
 
         int destinationPosition = 1;
-        for (int i = 1; i < loads; i += consecutiveLoads) {
+        for (int i = 0; i < loads; i += consecutiveLoads) {
             Destination destination = destinationList.get(destinationPosition);
             destinationRoute(destination);
             destinationPosition = destinationPosition == destinationList.size() - 1 ? 1 : destinationPosition + 1;
